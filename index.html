@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>vfoli - A Better Way to Build Your Video Portfolio</title>
+        <meta name="description" content="vfoli is the next generation of sharing professional video online." /> 
+
+        <!--Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
+
+        <!--vendors styles-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        
+
+        <!-- Bootstrap CSS / Color Scheme -->
+        <link rel="stylesheet" href="css/default.css" id="theme-color">
+        
+        <!--Adobe canvas -->
+        <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+        <script src="vfoli-anim.js"></script>
+
+        <script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("9EB8452AA96A4BE584FA087CCA5C051D");
+	var lib=comp.getLibrary();
+	handleComplete({},comp);
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	exportRoot = new lib.vfolianim12();
+	stage = new lib.Stage(canvas);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(true,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+        
+    </head>
+    <body onload="init();" data-spy="scroll" data-target="#boom-navbar" data-offset="0">
+
+        <!--navigation-->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top sticky-navigation" id="boom-navbar">
+            <a class="navbar-brand" href="index.html">
+               <img src="vfoli-dark.png" width="40%" height="40%" style="display: none" />
+            </a>
+            <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" 
+                    data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span data-feather="menu"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#features">Features</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#pricing">Pricing</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <a class="btn btn-primary page-scroll" href="#contact">
+                        Contact us
+                    </a>
+                </form>
+            </div>
+        </nav>
+
+        <!--hero header-->
+        <!-- section class="py-6 py-md-0 bg-gradient" id="home" style="background-image: url(img/vfoli-mon.png)"> -->
+        <section class="bg-hero py-7 py-md-0" id="home" style="background-image: url(img/vfoli-mon.png)">
+            <div class="container">
+                <div class="row vh-md-100">
+                    <div class="col-md-8 col-sm-10 my-auto mx-auto text-center fadeIn">
+                        
+                       <!--begin adobe animate code -->
+                        <div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:540px; height:270px">
+		<canvas id="canvas" width="540" height="270" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:540px; height:270px; position: absolute; left: 0px; top: 0px; display: block;">
+		</div>
+	</div>
+                        <!--end adobe animate code-->
+                        <h4 class="text-white mb-3 wow fadeInUp" data-wow-delay=".5s">Your videos play here.<sup class="trademark">&trade;</sup></h4>
+                        <h1 class="display-3 text-white mb-3 wow fadeInUp" data-wow-delay=".7s">Portfolios and business tools for video pros.</h1>
+                        <p class="lead text-light mb-5 wow fadeInUp" data-wow-delay="1s">We're building a new platform to share videos and manage your career.<!-- br/>
+                            <strong>
+                            It's a better way to showcase your work and stand out from the crowd.</strong--></p>
+                        <a href="#" class="btn btn-outline-light btn-lg wow fadeInUp" data-wow-delay="1.5s">
+                            Sign Up for Early Access
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- about section -->
+        <section class="bg-about pt-5" id="about" style="background-image: url(img/hero-sunset.jpg)">
+            
+            <div class="container">
+                
+                
+                <div class="row about">
+                    <div class="col-md-7 my-auto py-md-0 py-6">
+                        <span class="text-uppercase text-muted large-sm wow fadeInUp" data-wow-duration="2s">Video Platform of the Future</span>
+                        <h2 class="display-4 text-white wow fadeInUp" data-wow-duration="2s">Built by video professionals, for video professionals.</h2>
+                        <p class="lead text-white wow fadeInUp" data-wow-duration="2s">
+                           We have worked for media companies from the very large to the very small. We've been in hundreds of job interviews and creative meetings. We've been the creators, and we've been the managers. We know what it takes to make an impression, and we know you have great work to share.<br/>&nbsp;<br/>
+                            Let us help you reach new heights in your career. Be among <strong>the first</strong> to experience the new way to build your video portfolio online.
+                        </p>
+                        <p class="about-request wow fadeInUp" data-wow-delay="1s">
+                         <a href="#" class="btn btn-outline-light btn-lg" target="_blank">
+                            Request Access
+                        </a></p>
+                    </div>
+                
+               
+                    <div class="col-md-5 wow fadeInRight" data-wow-delay="1.2s">
+                        <a href="examples/">
+                        <img src="img/mockups-1.png" class="img-fluid d-block mx-auto my-3" alt="Mockups" /></a>
+                    </div>
+                </div> 
+               <!-- <div class="row mt-5">
+                    <div class="col-md-10 mx-auto">
+                        <img src="img/mockup.png" class="img-fluid d-block mx-auto" alt="Mockup"/>
+                    </div>
+                </div> -->
+
+                
+            </div>
+        </section>
+        
+        
+
+        <!--features section-->
+        <section class="bg-hero py-6" id="features" style="background-image: url(img/crew.jpeg)">
+            <div class="container-fluid">
+                
+                
+                
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="img/mobile-app.png" class="img-fluid d-block mx-auto wow fadeInLeft" alt="Mobile" />
+                    </div>
+                    <div class="col-md-5 mr-auto my-auto py-md-0 py-6 wow fadeIn">
+                        <span class="text-uppercase text-muted large-sm">The Features You've Been Waiting For</span>
+                        <h2 class="display-4 text-white">A video platform tailored to the needs of professionals.</h2>
+                        <p class="lead mb-5 text-muted">
+                            Here are just some of the reasons to make us your new home for managing your video career:
+                        </p>
+                        <div class="media wow fadeInRight">
+                            <div class="icon-box hover-box">
+                                <div class="icon-box-inner small-xs">
+                                    <span data-feather="video" width="30" height="30"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="mt-0 mb-3 text-white">You Are In Control</h4>
+                                <span class="text-muted lead">Fully customizable templates. Arrange videos into categories <strong>you</strong> choose.</span>
+                            </div>
+                        </div>
+                        <div class="media my-5 wow fadeInRight">
+                            <div class="icon-box hover-box">
+                                <div class="icon-box-inner small-xs">
+                                    <span data-feather="activity" width="30" height="30"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="mt-0 mb-3 text-white">Know What's Working</h4>
+                                <span class="text-muted lead">
+                               Stay one step ahead with analytics to show you who's watching each of your videos and when.</span>
+                            </div>
+                        </div>
+                        <div class="media wow fadeInRight">
+                            <div class="icon-box hover-box">
+                                <div class="icon-box-inner small-xs">
+                                    <span data-feather="layout" width="30" height="30"></span>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="mt-0 mb-3 text-white">Keep Track of It All</h4>
+                                <span class="text-muted lead">Manage job applications and proposals, billable hours, invoicing, and more.</span>
+                            </div>
+                            
+                        </div>
+                        <div class="media mid-cta wow fadeInUp">
+                            <a href="#" class="btn btn-outline-light btn-lg">
+                            Request Access
+                        </a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+         <!--pricing--> <!--
+        <section class="bg-white py-6" id="pricing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-xs-12 text-center">
+                        <h2 class="text-primary-dark">Pricing</h2>
+                        <p class="lead pt-3">
+                            Choose the package that's best for you.
+                        </p>
+                    </div>
+                </div>
+                <div class="row d-md-flex mt-4 text-center">
+                    <div class="col-sm-4 mt-4 wow fadeIn">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title pt-4 text-orange">Basic</h5>
+                                <h3 class="card-title text-primary pt-4">FREE</h3>
+                                <p class="card-text text-muted pb-3 border-bottom">per month</p>
+                                <ul class="list-unstyled pricing-list">
+                                    <li>Free setup</li>
+                                    <li>100MB storage</li>
+                                    <li>1GB bandwidth</li>
+                                    <li>Basic support</li>
+                                </ul>
+                                <a href="#" class="btn btn-primary btn-radius">Request Access</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mt-0 wow fadeIn">
+                        <div class="card pt-4 pb-4">
+                            <div class="card-body">
+                                <h5 class="card-title pt-4 text-orange">Standard 
+                                    <small class="badge bg-primary small-xs">FREE While in Beta</small></h5>
+                                <h3 class="card-title text-primary pt-4"><sup>$</sup> 9.99</h3>
+                                <p class="card-text text-muted pb-3 border-bottom strike">per month</p>
+                                
+                                 <p class="card-text pb-3 border-bottom">FREE While in Beta</p>
+                                <ul class="list-unstyled pricing-list">
+                                    <li>Free setup</li>
+                                    <li>5GB storage</li>
+                                    <li>Unlimited bandwidth</li>
+                                    <li>Priority support</li>
+                                </ul>
+                                <a href="#" class="btn btn-primary btn-radius">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mt-4 wow fadeIn">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title pt-4 text-orange">Advanced</h5>
+                                <h3 class="card-title text-primary pt-4"><sup>$</sup> 19.99</h3>
+                                <p class="card-text text-muted pb-3 border-bottom">per month</p>
+                                <ul class="list-unstyled pricing-list">
+                                    <li>Free setup</li>
+                                    <li>Unlimited storage</li>
+                                    <li>Unlimited bandwidth</li>
+                                    <li>24/7 support</li>
+                                </ul>
+                                <a href="#" class="btn btn-primary btn-radius">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        
+        <!--begin pricing-->
+ <!--pricing-->
+        <section class="py-5 bg-light" id="pricing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-xs-12 text-center pb-0">
+                        <h2 class="text-primary-dark">Pricing</h2>
+                        <p class="lead pt-3">
+                           All features are <strong>FREE</strong> while in Beta!<br />
+                           After that, we'll offer the following plans:
+                        </p>
+                    </div>
+                </div>
+                <div class="row d-md-flex mt-0 text-center">
+                    <div class="col-sm-4 mt-2 wow fadeInLeft">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title pt-4 text-orange">Basic</h5>
+                                <h3 class="card-title text-primary pt-4">FREE</h3>
+                                <p class="card-text text-muted pb-3 border-bottom">per month</p>
+                                <ul class="list-unstyled pricing-list">
+                                    <li>5 public video samples</li>
+                                    <li>Web-based video editor</li>
+                                    <li>Video analytics</li>
+                                    <li>3 Templates to Choose From</li>
+                                    <li>100MB Private Video Cloud Storage</li>
+                                    <li>Free Support</li>
+                                </ul>
+                                 <h3 class="card-title text-primary">FREE</h3>
+                                
+                                <p class="card-text text-muted pb-3 border-bottom">per year</p>
+                                
+                                <a href="#" class="btn btn-primary btn-radius wow fadeIn" data-wow-delay=".25s">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mt-0 wow fadeInUp">
+                        <div class="card pt-2 pb-4">
+                            <div class="card-body">
+                                <h5 class="card-title pt-4 text-orange">Premium<small class="badge bg-success small-xs" style="color: #fff">FREE<br />
+                                    <span style="font-size: .6rem;">While in Beta</span></small></h5>
+                                <h3 class="card-title text-primary pt-4"><sup>$</sup> 7.99</h3>
+                                <p class="card-text text-muted pb-3 border-bottom">per month</p>
+                                <ul class="list-unstyled pricing-list">
+                                    <li><strong>All FREE features plus:</strong></li>
+                                    <li>Up to 30 minutes of video samples</li>
+                                    <li>Job proposal/application tracker</li>
+                                    <li>10 templates to choose from</li>
+                                    <li>1GB Private Video Cloud Storage</li>
+                                    <li>Priority support</li>
+                                    
+                                </ul>
+                                 <h3 class="card-title text-primary"><sup>$</sup> 79</h3>
+                                
+                                <p class="card-text text-muted pb-3 border-bottom">per year</p>
+                                
+                                <a href="#" class="btn btn-primary btn-radius wow fadeIn" data-wow-delay=".25s">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mt-2 wow fadeInRight">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title pt-4 text-orange">Pro/Business
+                                <small class="badge bg-success small-xs" style="color: #fff">FREE<br />
+                                    <span style="font-size: .6rem;">While in Beta</span></small></h5>
+                                 
+
+              
+                                <h3 class="card-title text-primary pt-4"><sup>$</sup> 14.99</h3>
+                                <p class="card-text text-muted pb-3  border-bottom">per month</p>
+                                <ul class="list-unstyled pricing-list">
+                                    <li><strong>All FREE and PREMIUM <br />features plus:</strong></li>
+                                    <li>Unlimited video storage</li>
+                                    <li>Add custom domain/e-mail</li>
+                                    <li>Invoice management</li>
+                                    <li>Searchable Database of Your Videos</li>
+                               
+                                </ul>
+                                <div class="pt-3">
+                                <h3 class="card-title text-primary"><sup>$</sup> 149</h3>
+                                
+                                <p class="card-text text-muted pb-4 border-bottom">per year</p>
+                            </div>
+                                
+                                <a href="#" class="btn btn-primary btn-radius wow fadeIn" data-wow-delay=".25s">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    <!--end pricing addition -->
+        
+        <!--footer / contact -->
+        <footer class="py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 my-auto text-center text-md-left">
+                        &copy;<span id="year"></span> vfoli.
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <ul class="list-inline social social-rounded social-sm mb-0">
+                            <li class="list-inline-item">
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href=""><i class="fa fa-google-plus"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-3 text-center text-md-right mb-0">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="#">Privacy</a></li>
+                            <li class="list-inline-item"><a href="#">Terms</a></li>
+                            <li class="list-inline-item"><a href="#">Support</a></li>
+                        </ul>
+                    </div> 
+                </div> 
+                <div class="row mt-4">
+                    <div class="col-12 text-muted text-center small">
+                        &copy;<span id="year"></span> vfoli - All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--scroll to top-->
+        <div class="scroll-top">
+            <i class="fa fa-angle-up" aria-hidden="true"></i>
+        </div>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+        <script src="js/scripts.js"></script>
+         <script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+    </body>
+</html>
