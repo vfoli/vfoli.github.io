@@ -17,6 +17,7 @@
 
         <!-- Bootstrap CSS / Color Scheme -->
         <link rel="stylesheet" href="css/default.css" id="theme-color">
+        <link rel="stylesheet" href="css/price-toggle.css">
         
         <!--Adobe canvas -->
         <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -77,7 +78,7 @@ function handleComplete(evt,comp) {
                     </li>
                 </ul>
                 <form class="form-inline">
-                    <a class="btn btn-primary page-scroll" href="#contact">
+                    <a class="btn btn-primary page-scroll" href="contact-form/index.html">
                         Contact us
                     </a>
                 </form>
@@ -211,74 +212,6 @@ function handleComplete(evt,comp) {
         </section>
 
 
-         <!--pricing--> <!--
-        <section class="bg-white py-6" id="pricing">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-xs-12 text-center">
-                        <h2 class="text-primary-dark">Pricing</h2>
-                        <p class="lead pt-3">
-                            Choose the package that's best for you.
-                        </p>
-                    </div>
-                </div>
-                <div class="row d-md-flex mt-4 text-center">
-                    <div class="col-sm-4 mt-4 wow fadeIn">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title pt-4 text-orange">Basic</h5>
-                                <h3 class="card-title text-primary pt-4">FREE</h3>
-                                <p class="card-text text-muted pb-3 border-bottom">per month</p>
-                                <ul class="list-unstyled pricing-list">
-                                    <li>Free setup</li>
-                                    <li>100MB storage</li>
-                                    <li>1GB bandwidth</li>
-                                    <li>Basic support</li>
-                                </ul>
-                                <a href="#" class="btn btn-primary btn-radius">Request Access</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 mt-0 wow fadeIn">
-                        <div class="card pt-4 pb-4">
-                            <div class="card-body">
-                                <h5 class="card-title pt-4 text-orange">Standard 
-                                    <small class="badge bg-primary small-xs">FREE While in Beta</small></h5>
-                                <h3 class="card-title text-primary pt-4"><sup>$</sup> 9.99</h3>
-                                <p class="card-text text-muted pb-3 border-bottom strike">per month</p>
-                                
-                                 <p class="card-text pb-3 border-bottom">FREE While in Beta</p>
-                                <ul class="list-unstyled pricing-list">
-                                    <li>Free setup</li>
-                                    <li>5GB storage</li>
-                                    <li>Unlimited bandwidth</li>
-                                    <li>Priority support</li>
-                                </ul>
-                                <a href="#" class="btn btn-primary btn-radius">Order Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 mt-4 wow fadeIn">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title pt-4 text-orange">Advanced</h5>
-                                <h3 class="card-title text-primary pt-4"><sup>$</sup> 19.99</h3>
-                                <p class="card-text text-muted pb-3 border-bottom">per month</p>
-                                <ul class="list-unstyled pricing-list">
-                                    <li>Free setup</li>
-                                    <li>Unlimited storage</li>
-                                    <li>Unlimited bandwidth</li>
-                                    <li>24/7 support</li>
-                                </ul>
-                                <a href="#" class="btn btn-primary btn-radius">Order Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        
-        <!--begin pricing-->
  <!--pricing-->
         <section class="py-5 bg-light" id="pricing">
             <div class="container">
@@ -291,87 +224,80 @@ function handleComplete(evt,comp) {
                         </p>
                     </div>
                 </div>
-                <div class="row d-md-flex mt-0 text-center">
-                    <div class="col-sm-4 mt-2 wow fadeInLeft">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title pt-4 text-orange">Basic</h5>
-                                <h3 class="card-title text-primary pt-4">FREE</h3>
-                                <p class="card-text text-muted pb-3 border-bottom">per month</p>
-                                <ul class="list-unstyled pricing-list">
-                                    <li>5 public video samples</li>
-                                    <li>Web-based video editor</li>
-                                    <li>Video analytics</li>
-                                    <li>3 Templates to Choose From</li>
-                                    <li>100MB Private Video Cloud Storage</li>
-                                    <li>Free Support</li>
-                                </ul>
-                                 <h3 class="card-title text-primary">FREE</h3>
-                                
-                                <p class="card-text text-muted pb-3 border-bottom">per year</p>
-                                
-                                <a href="#" class="btn btn-primary btn-radius wow fadeIn" data-wow-delay=".25s">Sign Up</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 mt-0 wow fadeInUp">
-                        <div class="card pt-2 pb-4">
-                            <div class="card-body">
-                                <h5 class="card-title pt-4 text-orange">Premium<small class="badge bg-success small-xs" style="color: #fff">FREE<br />
-                                    <span style="font-size: .6rem;">While in Beta</span></small></h5>
-                                <h3 class="card-title text-primary pt-4"><sup>$</sup> 7.99</h3>
-                                <p class="card-text text-muted pb-3 border-bottom">per month</p>
-                                <ul class="list-unstyled pricing-list">
-                                    <li><strong>All FREE features plus:</strong></li>
+                
+                <!-- pricing by Alina N on Codepen -->
+                
+                <div class="container">
+    <div class="top">
+
+      <div class="toggle-btn">
+        <span style="margin: 0.8em;">Annually</span>
+        <label class="switch">
+          <input type="checkbox" id="checbox" onclick="check()" ; />
+          <span class="slider round"></span>
+        </label>
+        <span style="margin: 0.8em;">Monthly</span></div>
+    </div>
+
+    <div class="package-container">
+      <div class="packages">
+          <span class="packages-header pt-3 pb-3">
+        <h1>Basic</h1>
+        <h2 class="text1">FREE</h2>
+          <p class="text1 text-muted small">Per Month</p>
+          <h2 class="text2">FREE</h2>
+          <p class="text2 text-muted small">Per Year</p></span>
+        <ul class="list">
+          <li class="first">5 public video samples</li>
+          <li>Video analytics</li>
+          <li>3 Templates to Choose From</li>
+          <li>100MB Private Video Cloud Storage</li>
+          <li>Free Support</li>
+        </ul>
+        <a href="#" class="button button1">Sign Up</a>
+      </div>
+      <div class="packages">
+           <span class="packages-header pt-3 pb-3">
+        <h1>PREMIUM</h1>
+        <h2 class="text1">&dollar;4.99</h2>
+                <p class="text1 text-muted small">Per Month</p>
+        <h2 class="text2">&dollar;49.99</h2>
+                <p class="text2 text-muted small">Per Year</p>
+          </span>
+        <ul class="list pb-2">
+          <li><strong>All FREE features plus:</strong></li>
                                     <li>Up to 30 minutes of video samples</li>
                                     <li>Job proposal/application tracker</li>
                                     <li>10 templates to choose from</li>
                                     <li>1GB Private Video Cloud Storage</li>
                                     <li>Priority support</li>
-                                    
-                                </ul>
-                                 <h3 class="card-title text-primary"><sup>$</sup> 79</h3>
-                                
-                                <p class="card-text text-muted pb-3 border-bottom">per year</p>
-                                
-                                <a href="#" class="btn btn-primary btn-radius wow fadeIn" data-wow-delay=".25s">Sign Up</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 mt-2 wow fadeInRight">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title pt-4 text-orange">Pro/Business
-                                <small class="badge bg-success small-xs" style="color: #fff">FREE<br />
-                                    <span style="font-size: .6rem;">While in Beta</span></small></h5>
-                                 
-
-              
-                                <h3 class="card-title text-primary pt-4"><sup>$</sup> 14.99</h3>
-                                <p class="card-text text-muted pb-3  border-bottom">per month</p>
-                                <ul class="list-unstyled pricing-list">
-                                    <li><strong>All FREE and PREMIUM <br />features plus:</strong></li>
+        </ul>
+        <a href="#" class="button button2">Sign Up</a>
+      </div>
+      <div class="packages">
+           <span class="packages-header pt-3 pb-3">
+        <h1>PRO</h1>
+        <h2 class="text1">&dollar;9.99</h2>
+               <p class="text1 text-muted small">Per Month</p>
+        <h2 class="text2">&dollar;79.99</h2>
+               <p class="text2 text-muted small">Per Year</p>
+          </span>
+        <ul class="list pb-2 pt-3">
+         <li><strong>FREE and PREMIUM <br />features plus:</strong></li>
                                     <li>Unlimited video storage</li>
                                     <li>Add custom domain/e-mail</li>
                                     <li>Invoice management</li>
                                     <li>Searchable Database of Your Videos</li>
-                               
-                                </ul>
-                                <div class="pt-3">
-                                <h3 class="card-title text-primary"><sup>$</sup> 149</h3>
-                                
-                                <p class="card-text text-muted pb-4 border-bottom">per year</p>
-                            </div>
-                                
-                                <a href="#" class="btn btn-primary btn-radius wow fadeIn" data-wow-delay=".25s">Sign Up</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </ul>
+        <a href="#" class="button button3">Sign Up</a>
+      </div>
+    </div>
+  </div>
             </div>
-        </section>
+                </section>       
+                
         
-    <!--end pricing addition -->
+    <!--end pricing-->
         
         <!--footer / contact -->
         <footer class="py-5 bg-light">
@@ -423,6 +349,7 @@ function handleComplete(evt,comp) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
         <script src="js/scripts.js"></script>
+        <script src="js/price-toggle.js"></script>
          <script>
   document.getElementById("year").innerHTML = new Date().getFullYear();
   </script>
