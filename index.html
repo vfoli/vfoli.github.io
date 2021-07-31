@@ -81,7 +81,15 @@ function handleComplete(evt,comp) {
                     </li>
                 </ul>
                
-                    <a class="btn btn-primary page-scroll" href="contact.html" target="_blank">
+                    <a class="btn btn-primary page-scroll" href="contact.html" onclick="window.open(this.href,'targetWindow',
+                                   `toolbar=no,
+                                    location=no,
+                                    status=no,
+                                    menubar=no,
+                                    scrollbars=yes,
+                                    resizable=yes,
+                                    width=600   
+                                    height=500`); return false;">
                         Contact us
                     </a>
             
