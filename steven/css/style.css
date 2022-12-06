@@ -97,8 +97,8 @@ h3.main {
         font-weight: 600;
     }
 h3.subhead {
-    background-color: #83d3c9;
-     color: #af3030;
+    background-color: #060606;
+     color: #30abaf;
     /* color: #5c5c5c */
     font-weight: 500;
     font-size: 10pt;
@@ -158,7 +158,7 @@ h3.cat {
 	}
 
 	header.special {
-        background-color: #c7c7c7;
+        background-color: #151515;
 		padding-bottom: 4em;
 		padding-top: 0em;
 		position: relative;
@@ -597,7 +597,7 @@ h3.cat {
 	@keyframes reveal-header { 0% { top: -5em; } 100% { top: 0; } }
 
 	#header {
-		background: #5c5c5c;
+		background: #060606;
 		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
 		color: #f0f0f0;
 		cursor: default;

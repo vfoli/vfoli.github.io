@@ -648,9 +648,9 @@ h3.cat {
 	@keyframes reveal-header { 0% { top: -5em; } 100% { top: 0; } }
 
 	#header {
-		background: #5c5c5c;
+		background: #090909;
 		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
-		color: #f0f0f0;
+		color: #337e8d;
 		cursor: default;
 		font-size: 0.8em;
 		left: 0;
