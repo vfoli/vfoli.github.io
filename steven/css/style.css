@@ -157,6 +157,11 @@ h3.cat {
 		padding-bottom: 2em;
 	}
 
+	div.mainvid {
+		margin:auto;
+		width: 70%;
+	}
+
 	header.special {
         background-color: #151515;
 		padding-bottom: 4em;
