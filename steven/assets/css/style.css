@@ -148,7 +148,8 @@ h3.cat {
 	}
 
 	header.special {
-		margin-bottom: 3em;
+
+		padding-bottom: 3em;
 		padding-top: 0em;
 		position: relative;
 		text-align: center;
